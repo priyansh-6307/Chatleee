@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./Tillsignup/Homepage";
 import SignUp from "./Tillsignup/SignUp";
 import socketIO from 'socket.io-client';
-const socket = socketIO.connect('https://chatleee.onrender.com');
+const socket = socketIO.connect('http://localhost:2000');
 import './index.css';
 import Signin from "./Tillsignup/Signin";
 import Account from "./Home/Account";

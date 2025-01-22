@@ -6,7 +6,7 @@ const Chatbar = ({ socket }) => {
 
   const fetchUser = async () => {
     try {
-      const { data } = await axios.get("https://chatleee.onrender.com/api/v1/active-users");
+      const { data } = await axios.get("http:/localhost:2000/api/v1/active-users");
       setUsers(Array.isArray(data.activeUsers) ? data.activeUsers : []);
     } catch (error) {
       console.error("Error fetching users:", error);
