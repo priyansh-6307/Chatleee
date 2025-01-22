@@ -10,7 +10,7 @@ const user = require('./models/user');
 
 
 const app = express();
-const PORT = 2000;
+const PORT = process.env.PORT || 2000;
 
 mongoose.connect('mongodb+srv://mongo:mongo@cluster0.tg0rc.mongodb.net/')
   .then(() => {
