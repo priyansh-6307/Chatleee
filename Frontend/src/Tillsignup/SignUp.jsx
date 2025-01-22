@@ -25,7 +25,7 @@ const submit=async()=>{
     }
     else{
       console.log(Values)
-      const response= await axios.post('http://localhost:2000/api/v1/sign-up',Values)
+      const response= await axios.post('https://chatleee.onrender.com/api/v1/sign-up',Values)
       navigate('/sign-in')
     }
   } catch (err) {
