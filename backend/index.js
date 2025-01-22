@@ -12,13 +12,16 @@ const user = require('./models/user');
 const app = express();
 const PORT = process.env.PORT || 2000;
 
-mongoose.connect('mongodb+srv://mongo:mongo@cluster0.tg0rc.mongodb.net/')
+
+
+mongoose.connect('mongodb+srv://mongo:mongo@cluster0.tg0rc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => {
     console.log('MongoDB connected');
   })
   .catch((err) => {
     console.error('MongoDB connection error:', err);
   });
+
 
 
 app.use(cors());
@@ -32,8 +35,9 @@ const server = app.listen(PORT, () => {
 });
 
 
+
 const io= new Server(server,{
-  cors:{origin:"https://eclectic-sunburst-8d5ecf.netlify.app/"}
+  cors:{origin:"http://localhost:5173"}
 })
 
 io.on("connection", (socket) => {
