@@ -37,7 +37,7 @@ const server = app.listen(PORT, () => {
 
 
 const io= new Server(server,{
-  cors:{origin:"http://localhost:5173"}
+  cors:{origin:"https://magical-tiramisu-46883c.netlify.app/"}
 })
 
 io.on("connection", (socket) => {
