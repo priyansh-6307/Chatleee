@@ -12,7 +12,7 @@ const user = require('./models/user');
 const app = express();
 const PORT = 2000;
 
-mongoose.connect('mongodb://localhost:27017/Chat')
+mongoose.connect('mongodb+srv://mongo:mongo@cluster0.tg0rc.mongodb.net/')
   .then(() => {
     console.log('MongoDB connected');
   })
